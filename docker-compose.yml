@@ -1,0 +1,7 @@
+web:
+  build: .
+  ports:
+    - "9005:9005"
+    - "35729:35729"
+  volumes:
+    - ./src:/var/www/verbose/src
