@@ -3,6 +3,7 @@
   "private": true,
   "devDependencies": {
     "browserify": "^11.2.0",
+    "connect-history-api-fallback": "^1.1.0",
     "eslint-plugin-react": "^3.5.1",
     "flux": "^2.1.1",
     "gulp": "^3.9.0",

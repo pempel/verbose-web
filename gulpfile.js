@@ -3,14 +3,15 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var connect = require("gulp-connect");
+var eslint = require("gulp-eslint");
+
 var browserify = require("browserify");
 var reactify = require("reactify");
+var history = require("connect-history-api-fallback");
 var source = require("vinyl-source-stream");
-var eslint = require("gulp-eslint");
 
 var config = {
   port: 9005,
-  host: "http://localhost",
   paths: {
     html: "./src/*.html",
     bootstrapCss: "./bower_components/bootstrap-sass/assets/stylesheets",
@@ -25,8 +26,12 @@ gulp.task("connect", function() {
   connect.server({
     root: ["dist"],
     port: config.port,
-    base: config.host,
-    livereload: true
+    livereload: true,
+    middleware: function(connect, opt) {
+      return [
+        history()
+      ]
+    }
   });
 });
 
