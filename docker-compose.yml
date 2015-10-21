@@ -1,7 +1,7 @@
 web:
-  build: .
+  build: "."
+  command: "npm run serve"
   ports:
-    - "9005:9005"
-    - "35729:35729"
+    - "3030:3030"
   volumes:
-    - ./src:/var/www/verbose/src
+    - "./app:/var/www/verbose/app"

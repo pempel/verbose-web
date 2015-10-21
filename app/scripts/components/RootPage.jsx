@@ -1,7 +1,7 @@
 "use strict";
 
 var React = require("react");
-var Header = require("./shared/Header");
+var Header = require("components/shared/Header");
 
 var RootPage = React.createClass({
   render: function() {
