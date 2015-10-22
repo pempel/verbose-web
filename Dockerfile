@@ -12,6 +12,7 @@ RUN npm install > /dev/null 2>&1
 
 COPY .eslintrc .eslintrc
 COPY webpack.config.js webpack.config.js
+COPY bootstrap-sass.config.js bootstrap-sass.config.js
 
 EXPOSE 3030
 VOLUME /var/www/verbose/app

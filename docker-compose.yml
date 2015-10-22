@@ -1,4 +1,4 @@
-web:
+app:
   build: "."
   command: "npm run serve"
   ports:
