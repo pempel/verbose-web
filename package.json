@@ -4,7 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "webpack --colors --progress",
+    "build": "webpack --colors --progress --display-error-details",
     "watch": "webpack-dev-server --config webpack.config.js --hot --inline --colors --history-api-fallback --port 3030 --host 0.0.0.0",
     "serve": "npm run build && npm run watch"
   },
@@ -24,6 +24,7 @@
     "html-webpack-plugin": "^1.6.2",
     "imports-loader": "^0.6.5",
     "jquery": "^2.1.4",
+    "keymirror": "^0.1.1",
     "node-sass": "^3.3.3",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
