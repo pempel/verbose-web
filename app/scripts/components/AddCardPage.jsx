@@ -1,11 +1,12 @@
 "use strict";
 
 var React = require("react");
+var CardSearchForm = require("components/CardSearchForm");
 
 var AddCardPage = React.createClass({
   render: function() {
     return (
-      <p>Add a new card.</p>
+      <CardSearchForm/>
     );
   }
 });

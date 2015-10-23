@@ -2,19 +2,14 @@
 
 var request = require("superagent");
 
-var host = "http://192.168.99.100:3000";
+// TODO: Replace this hard-coded value with an environment variable.
+//var host = "http://192.168.99.100:3000";
 
 var API = {
-  getCards: function() {
-    request
-      .get(host + "/cards")
-      .set("Accept", "application/json")
-      .end(function(error, response) {
-        if (response) {
-          var json = JSON.parse(response.text);
-          console.log(json);
-        }
-      });
+  searchCards: function(query) {
+
+    // TODO: Replace this stub with the real API call.
+    console.log("API.searchCards(" + query + ")");
   }
 };
 
