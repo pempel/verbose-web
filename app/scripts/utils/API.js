@@ -1,16 +1,28 @@
 "use strict";
 
 var request = require("superagent");
+var ActionCreators = require("actions/ActionCreators");
 
-// TODO: Replace this hard-coded value with an environment variable.
-//var host = "http://192.168.99.100:3000";
+var API_URL = process.env.API_URL;
 
 var API = {
-  searchCards: function(query) {
 
-    // TODO: Replace this stub with the real API call.
-    console.log("API.searchCards(" + query + ")");
+  searchCards: function(query) {
+    request
+      .get(API_URL + "/cards")
+      .query({query: query})
+      .set("Accept", "application/json")
+      .end(function(error, response) {
+        if (error) {
+          console.log("ERROR: ", error);
+        }
+        else {
+          var json = JSON.parse(response.text);
+          ActionCreators.receiveCards(json);
+        }
+      });
   }
+
 };
 
 module.exports = API;

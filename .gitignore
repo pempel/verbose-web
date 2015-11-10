@@ -1,4 +1,4 @@
-bower_components/*
-node_modules/*
-dist/*
-app/public/*
+/app/public/*
+/bower_components/*
+/development.env
+/node_modules/*

@@ -1,7 +1,7 @@
 "use strict";
 
 var React = require("react");
-var Actions = require("actions/Actions");
+var ActionCreators = require("actions/ActionCreators");
 
 var CardSearchForm = React.createClass({
   getInitialState: function() {
@@ -16,7 +16,7 @@ var CardSearchForm = React.createClass({
 
   onSubmit: function(event) {
     event.preventDefault();
-    Actions.searchCards(this.state.query);
+    ActionCreators.searchCards(this.state.query);
   },
 
   render: function() {
